@@ -1,0 +1,19 @@
+{
+    "name": "task-manager",
+    "main": "index.html",
+    "window": {
+        "title": "System Task Manager",
+        "width": 1200,
+        "height": 800,
+        "min_width": 800,
+        "min_height": 600
+    },
+    "dependencies": {
+        "nw": "^0.105.0"
+    },
+    "scripts": {
+        "start": "nw .",
+        "start electron": "electron .",
+        "dist": "electron-builder"
+      }
+}
