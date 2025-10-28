@@ -13,7 +13,7 @@ Main difference compared to others:<br>
 -Can list files opend by process<br><br>
 
 This version needs some fixing, it's not final. Not everything is added still.<br>
-Logo was media as idea of heart pulse, bright red to add seriousness and cpu logo to resemple electronics. <br> 
+Logo was as idea of heart pulse, bright red to add seriousness and cpu logo to resemple electronics. <br> 
 Like a cpu on cardiac monitor, really like it.<br>
 It's just for linux <br> <br>
 **Download** - <a href="">~~Link~~</a> <br><br>
