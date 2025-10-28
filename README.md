@@ -12,7 +12,10 @@ Main difference compared to others:<br>
 -Gpu usage showed compared to Gnome one and KDE one <br>
 -Can list files opend by process<br><br>
 
-This version needs some fixing, it's not final. Not everything is added still
+This version needs some fixing, it's not final. Not everything is added still.<br>
+Logo was media as idea of heart pulse, bright red to add seriousness and cpu logo to resemple electronics. <br> 
+Like a cpu on cardiac monitor, really like it.<br>
 It's just for linux <br> <br>
 **Download** - <a href="">~~Link~~</a> <br><br>
-<img width="1333" height="919" alt="image" src="https://github.com/user-attachments/assets/8ac0a3c9-df75-4169-928d-cd46ff5be9ad" />
+<img width="1334" height="924" alt="image" src="https://github.com/user-attachments/assets/dba62eab-fbf2-4670-88f4-bc3fd0797792" />
+
