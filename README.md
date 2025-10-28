@@ -3,7 +3,7 @@
 This is just vibe coded system monitor "taskmanager" app that i made for personal usage. <br>
 Why?<br>
 Well cause KDE plasma System Monitor idle uses like 4-5% cpu, Gnome System monitor is almost same from 2010 and now,
-so i made this. <br> It's just testing version that will be used in my linux desktop enviroment I'm making.
+so i made this.<br> I know web app isn't best for cpu usage, but this is still better then KDE System Monitor, even if it uses QT. <br> It's just testing version that will be used in my linux desktop enviroment I'm making. And it will be optimized in future 
 <br>Personaly i use some 3d party system monitor on my linux, but even it uses a lot of cpu that i use just terminal and top command...
 End app won't use electron. <br> <br>
 Main difference compared to others:<br>
