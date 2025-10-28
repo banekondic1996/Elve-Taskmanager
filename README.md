@@ -1,4 +1,4 @@
-# <img width="82" height="auto" alt="Elve System Monitor" src="https://github.com/user-attachments/assets/97021d33-ca42-433c-a9da-41adfd1f648e" /> Elve Terminal
+# <img width="82" height="auto" alt="Elve System Monitor" src="https://github.com/user-attachments/assets/97021d33-ca42-433c-a9da-41adfd1f648e" /> Elve System Monitor
 
 This is just vibe coded system monitor "taskmanager" app that i made for personal usage. <br>
 Why?<br>
