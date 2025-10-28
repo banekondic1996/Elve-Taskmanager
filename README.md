@@ -17,5 +17,6 @@ Logo was as idea of heart pulse, bright red to add seriousness and cpu logo to r
 Like a cpu on cardiac monitor, really like it.<br>
 It's just for linux <br> <br>
 **Download** - <a href="">~~Link~~</a> <br><br>
-<img width="1334" height="924" alt="image" src="https://github.com/user-attachments/assets/dba62eab-fbf2-4670-88f4-bc3fd0797792" />
+<img width="1319" height="907" alt="image" src="https://github.com/user-attachments/assets/0f45d0fe-68b1-4bdc-9236-a1e9ebb6b8c4" />
+
 
