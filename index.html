@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>System Task Manager</title>
+<title>Elve System Monitor</title>
 <style>
 * {
     margin: 0;
@@ -30,11 +30,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 20px;
+    margin: 10px;
+    margin-bottom: 0px;
 }
 
 .header h1 {
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 800;
 }
 
 .header-actions {
@@ -45,8 +48,8 @@ body {
 
 .btn {
     padding: 8px 16px;
-    background: #0e639c;
     color: #fff;
+    background: #d2861652;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -55,7 +58,7 @@ body {
 }
 
 .btn:hover {
-    background: #1177bb;
+    background: #d28716d0;
 }
 
 .btn:disabled {
@@ -65,11 +68,11 @@ body {
 }
 
 .btn-danger {
-    background: #c52a2a;
+    background: #502f2f;
 }
 
 .btn-danger:hover {
-    background: #d63939;
+    background: #b93232;
 }
 
 .btn-small {
@@ -84,10 +87,12 @@ body {
 }
 
 .sidebar {
-    width: 200px;
+    width: 140px;
     background: #252526;
+    border-radius: 20px;
+    margin: 10px;
     border-right: 1px solid #3e3e42;
-    padding: 10px 0;
+    padding: 4px 0;
 }
 
 .sidebar-item {
@@ -104,7 +109,7 @@ body {
 }
 
 .sidebar-item.active {
-    background: #094771;
+    background: #d2861652;
     border-left: none;
 }
 
@@ -116,19 +121,26 @@ body {
 }
 
 .system-stats {
-    display: grid;
+    display: flex;
+    contain: content;
     grid-template-columns: repeat(auto-fit, minmax(120px, 150px));
     gap: 12px;
-    padding: 20px;
+    padding: 8px;
+    border-radius: 20px;
+    margin: 20px;
+    margin-bottom: 0px;
     background: #2d2d30;
     border-bottom: 1px solid #3e3e42;
-    justify-content: start;
+    justify-content: center;
 }
 
 .stat-card {
+    min-width: fit-content;
+    max-height: fit-content;
+    text-align: center;
     background: #1e1e1e;
     padding: 15px;
-    border-radius: 6px;
+    border-radius: 10px;
     border: 1px solid #3e3e42;
 }
 
@@ -139,9 +151,9 @@ body {
 }
 
 .stat-value {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
-    color: #0e639c;
+    color: #d28616;
 }
 
 .stat-label {
@@ -179,7 +191,8 @@ body {
 
 table {
     width: 100%;
-    border-collapse: collapse;
+    font-size: 14px;
+    border-radius: 10px;
 }
 
 thead {
@@ -187,13 +200,13 @@ thead {
     top: 0;
     background: #252526;
     z-index: 10;
+    border-radius: 20px;
 }
 
 th {
     text-align: left;
     padding: 12px;
     font-weight: 600;
-    border-bottom: 2px solid #3e3e42;
     cursor: pointer;
     user-select: none;
 }
@@ -203,13 +216,15 @@ th:hover {
 }
 
 td {
-    padding: 10px 12px;
+    padding: 1px 12px;
+    margin:2px;
     border-bottom: 1px solid #2d2d30;
 }
 
 tbody tr {
     transition: background 0.15s;
     cursor: pointer;
+    border-radius:10px;
 }
 
 tbody tr:hover {
@@ -217,13 +232,13 @@ tbody tr:hover {
 }
 
 tbody tr.selected {
-    background: #094771 !important;
-    border-left: 3px solid #0e639c;
+    background: #d2861652 !important;
 }
 
 .cpu-cell, .memory-cell {
-    padding: 6px 12px !important;
-    border-radius: 3px;
+    padding: 6px 6px !important;
+    border-radius:3px;
+    margin:2px;
     font-weight: 600;
 }
 
@@ -231,9 +246,8 @@ tbody tr.selected {
     position: fixed;
     background: #252526;
     border: 1px solid #3e3e42;
-    border-radius: 4px;
+    border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    padding: 4px 0;
     z-index: 1000;
     display: none;
     min-width: 180px;
@@ -247,11 +261,13 @@ tbody tr.selected {
 }
 
 .context-menu-item:hover {
-    background: #094771;
+    background: #d2861652;
 }
 
 .context-menu-item.danger:hover {
     background: #c52a2a;
+    border-radius: 10px 10px 0px 0px;
+
 }
 
 .context-menu-separator {
@@ -262,13 +278,18 @@ tbody tr.selected {
 
 .chart-container {
     padding: 20px;
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 20px;
     overflow: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .chart-card {
+    width: 300px;
+    height: 200px;
     background: #252526;
     padding: 20px;
     border-radius: 6px;
@@ -299,7 +320,9 @@ tbody tr.selected {
 canvas {
     display: block;
     max-width: 100%;
-    height: auto !important;
+    width: 100%;
+    height: 120%;
+    margin-top: -30px;
 }
 
 .hidden {
@@ -320,7 +343,7 @@ canvas {
 }
 
 .log-entry.selected {
-    background: #094771;
+    background: #d2861652;
 }
 
 .log-entry-header {
@@ -330,13 +353,13 @@ canvas {
 }
 
 .log-entry-app {
-    font-weight: 600;
+    font-weight: 400;
     color: #4ec9b0;
 }
 
 .log-entry-time {
     font-size: 11px;
-    color: #999;
+    color: ffffff;
 }
 
 .log-entry-message {
@@ -362,6 +385,7 @@ canvas {
 
 .network-entry {
     padding: 8px 12px;
+    color: #ffffff;
     background: #252526;
     border-radius: 4px;
     margin-bottom: 6px;
@@ -371,22 +395,23 @@ canvas {
 
 .network-entry-header {
     display: flex;
+    color: #9c750e;
     justify-content: space-between;
     margin-bottom: 4px;
     font-weight: 600;
 }
 
 .network-entry-details {
-    color: #999;
-    font-size: 10px;
+    color: #ffffff;
+    font-size: 14px;
 }
 
 .btn.enabled {
-    background: #0e639c;
+    background: #7e0f0f;
 }
 
 .btn.disabled {
-    background: #555;
+    background: #1d7e24;
 }
 
 .refresh-indicator {
@@ -520,6 +545,7 @@ canvas {
 
 .startup-item-info, .cron-item-info, .service-item-info {
     flex: 1;
+    contain: inline-size;
 }
 
 .startup-item-name, .service-item-name {
@@ -528,14 +554,15 @@ canvas {
 }
 
 .startup-item-command, .cron-item-command {
-    font-size: 11px;
+    font-size: 14px;
     color: #999;
     font-family: 'Courier New', monospace;
+    contain: content;
 }
 
 .cron-item-schedule {
     font-family: 'Courier New', monospace;
-    font-size: 12px;
+    font-size: 14px;
     color: #4ec9b0;
     margin-bottom: 4px;
 }
@@ -581,7 +608,7 @@ canvas {
 <body>
 <div class="container">
 <div class="header">
-    <h1>System Task Manager</h1>
+    <h1>Elve System Monitor</h1>
     <div class="header-actions">
         <button class="btn btn-danger" id="kill-selected-btn" disabled>Kill Selected Process</button>
     </div>
@@ -603,6 +630,12 @@ canvas {
             <div class="stat-card">
                 <h3>CPU</h3>
                 <div class="stat-value" id="cpu-stat">0%</div>
+                <div class="stat-label">CPU usage</div>
+            </div>
+            <div class="stat-card">
+                <h3>GPU</h3>
+                <div class="stat-value" id="gpu-stat">0%</div>
+                <div class="stat-label">GPU usage</div>
             </div>
             <div class="stat-card">
                 <h3>MEMORY</h3>
@@ -610,25 +643,19 @@ canvas {
                 <div class="stat-label" id="memory-detail">0/0 GB</div>
             </div>
             <div class="stat-card">
-                <h3>GPU</h3>
-                <div class="stat-value" id="gpu-stat">0%</div>
-            </div>
-            <div class="stat-card">
                 <h3>DISK</h3>
                 <div class="stat-value" id="disk-stat">0%</div>
                 <div class="stat-label" id="disk-detail">0/0 GB</div>
             </div>
             <div class="stat-card">
-                <h3>NET ↓</h3>
+                <h3>NETWORK</h3>
                 <div class="stat-value" id="network-stat">0 KB/s</div>
-            </div>
-            <div class="stat-card">
-                <h3>NET ↑</h3>
-                <div class="stat-value" id="network-upload">0 KB/s</div>
+                <div class="stat-label" id="network-upload">0 KB/s</div>
             </div>
             <div class="stat-card">
                 <h3>TEMP</h3>
                 <div class="stat-value" id="temp-stat">0°C</div>
+                <div class="stat-label" id="temp-detail">CPU temperature</div>
             </div>
         </div>
 
@@ -683,14 +710,14 @@ canvas {
         </div>
 
         <div id="startup-view" class="process-table-container hidden">
-            <h2 style="margin-bottom: 15px;">Startup Applications</h2>
+            <h3 style="margin-bottom: 15px;">Startup Applications</h3>
             <div class="startup-list" id="startup-list">
                 <p style="text-align: center; padding: 40px;">Loading startup applications...</p>
             </div>
         </div>
 
         <div id="crontab-view" class="process-table-container hidden">
-            <h2 style="margin-bottom: 15px;">Cron Jobs</h2>
+            <h3 style="margin-bottom: 15px;">Cron Jobs</h3>
             <div class="user-select">
                 <select id="cron-user-select">
                     <option value="">Loading users...</option>
@@ -702,7 +729,7 @@ canvas {
         </div>
 
         <div id="services-view" class="process-table-container hidden">
-            <h2 style="margin-bottom: 15px;">System Services</h2>
+            <h3 style="margin-bottom: 15px;">System Services</h3>
             <div class="search-container">
                 <input type="text" id="service-search" placeholder="Search services..." />
             </div>
@@ -712,7 +739,7 @@ canvas {
         </div>
 
         <div id="logs-view" class="process-table-container hidden">
-            <h2 style="margin-bottom: 15px;">System Logs (journald)</h2>
+            <h3 style="margin-bottom: 15px;">System Logs (journald)</h3>
             <div class="startup-list" id="logs-list" style="max-height: 40%; overflow: auto;">
                 <p style="text-align: center; padding: 40px;">Loading logs...</p>
             </div>
@@ -722,7 +749,7 @@ canvas {
         </div>
 
         <div id="network-view" class="process-table-container hidden">
-            <h2 style="margin-bottom: 15px;">Network Connections (ss -tupn)</h2>
+            <h3 style="margin-bottom: 15px;">Network Connections (ss -tupn)</h3>
             <button class="btn" id="refresh-network" style="margin-bottom: 15px;">Refresh</button>
             <div class="startup-list" id="network-list">
                 <p style="text-align: center; padding: 40px;">Loading network connections...</p>
@@ -873,69 +900,85 @@ function drawChart(canvasId, data, color, maxValue, unit) {
     canvas.width = rect.width * dpr;
     canvas.height = rect.height * dpr;
     ctx.scale(dpr, dpr);
-    const width = rect.width, height = rect.height, padding = 40;
-    const chartWidth = width - padding, chartHeight = height - padding;
+
+    // Padding settings
+    const paddingLeft = 40;
+    const paddingRight = 20;
+    const paddingTop = 40;
+    const paddingBottom = 40;
+
+    const width = rect.width;
+    const height = rect.height;
+    const chartWidth = width - paddingLeft - paddingRight;
+    const chartHeight = height - paddingTop - paddingBottom;
+
     ctx.clearRect(0, 0, width, height);
     if (data.length < 2) return;
+
     const max = maxValue || Math.max(...data, 1);
     const step = chartWidth / (maxHistoryPoints - 1);
     canvas.dataPoints = [];
+
+    // Grid lines and labels
     ctx.strokeStyle = '#3e3e42';
     ctx.fillStyle = '#999';
     ctx.font = '11px sans-serif';
     ctx.lineWidth = 1;
+
     for (let i = 0; i <= 4; i++) {
-        const y = (chartHeight / 4) * i;
+        const y = paddingTop + (chartHeight / 4) * i;
         const value = max - (max / 4) * i;
         ctx.beginPath();
-        ctx.moveTo(padding, y);
-        ctx.lineTo(width, y);
+        ctx.moveTo(paddingLeft, y);
+        ctx.lineTo(width - paddingRight, y);
         ctx.stroke();
         ctx.fillText(value.toFixed(1), 2, y + 4);
     }
+
+    // Line
     ctx.strokeStyle = color;
     ctx.lineWidth = 2;
     ctx.beginPath();
+
     data.forEach((value, i) => {
-        const x = padding + i * step;
-        const y = chartHeight - (value / max) * chartHeight;
+        value=Math.abs(value);
+        const x = paddingLeft + i * step;
+        const y = paddingTop + chartHeight - (value / max) * chartHeight;
         canvas.dataPoints.push({ x, y, value, index: i });
         if (i === 0) ctx.moveTo(x, y);
         else ctx.lineTo(x, y);
     });
+
     ctx.stroke();
-    ctx.lineTo(padding + chartWidth, chartHeight);
-    ctx.lineTo(padding, chartHeight);
+
+    // Fill under line
+    ctx.lineTo(paddingLeft + chartWidth, paddingTop + chartHeight);
+    ctx.lineTo(paddingLeft, paddingTop + chartHeight);
     ctx.closePath();
     ctx.fillStyle = color + '20';
     ctx.fill();
-    ctx.fillStyle = color;
-    data.forEach((value, i) => {
-        const x = padding + i * step;
-        const y = chartHeight - (value / max) * chartHeight;
-        ctx.beginPath();
-        ctx.arc(x, y, 2.5, 0, 2 * Math.PI);
-        ctx.fill();
-    });
+
+    // Last value label
     if (data.length > 0) {
         const lastValue = data[data.length - 1];
-        const lastX = padding + (data.length - 1) * step;
-        const lastY = chartHeight - (lastValue / max) * chartHeight;
-        ctx.beginPath();
-        ctx.arc(lastX, lastY, 4, 0, 2 * Math.PI);
-        ctx.fill();
+        const lastX = paddingLeft + (data.length - 1) * step;
+        const lastY = paddingTop + chartHeight - (lastValue / max) * chartHeight;
+
         ctx.font = 'bold 12px sans-serif';
         const label = lastValue.toFixed(1) + (unit || '');
         const labelWidth = ctx.measureText(label).width;
-        const labelX = lastX - labelWidth / 2;
+        const labelX = Math.min(lastX - labelWidth / 2, width - labelWidth - paddingRight - 8); // prevent overflow
         const labelY = lastY - 10;
+
         ctx.fillStyle = 'rgba(37, 37, 38, 0.8)';
         ctx.fillRect(labelX - 4, labelY - 12, labelWidth + 8, 16);
         ctx.fillStyle = color;
         ctx.fillText(label, labelX, labelY);
     }
+
     setupChartHover(canvas, canvasId, unit);
 }
+
 
 function setupChartHover(canvas, canvasId, unit) {
     const tooltip = document.getElementById(canvasId.replace('-chart', '-tooltip'));
@@ -1128,17 +1171,17 @@ function killProcess(pid) {
 }
 
 function getCPUColor(p) {
-    if (p < 25) return 'rgba(78, 201, 176, 0.2)';
-    if (p < 50) return 'rgba(206, 145, 120, 0.3)';
-    if (p < 75) return 'rgba(214, 157, 133, 0.4)';
+    if (p < 25) return 'rgba(78, 201, 176, 0.1)';
+    if (p < 50) return 'rgba(255, 160, 159, 0.1)';
+    if (p < 75) return 'rgba(214, 157, 133, 0.3)';
     return 'rgba(197, 42, 42, 0.5)';
 }
 
 function getMemoryColor(mb) {
     const p = (mb / totalRAM) * 100;
-    if (p < 1) return 'rgba(78, 201, 176, 0.2)';
-    if (p < 5) return 'rgba(206, 145, 120, 0.3)';
-    if (p < 10) return 'rgba(214, 157, 133, 0.4)';
+    if (p < 1) return 'rgba(78, 201, 176, 0.1)';
+    if (p < 5) return 'rgba(255, 160, 159, 0.1)';
+    if (p < 10) return 'rgba(214, 157, 133, 0.3)';
     return 'rgba(197, 42, 42, 0.5)';
 }
 
@@ -1157,8 +1200,8 @@ function updateSystemStats() {
         document.getElementById('disk-detail').textContent = `${disk.used}/${disk.total}`;
     });
     getNetworkUsage(net => {
-        document.getElementById('network-stat').textContent = `${net.down.toFixed(1)} KB/s`;
-        document.getElementById('network-upload').textContent = `${net.up.toFixed(1)} KB/s`;
+        document.getElementById('network-stat').textContent = `↓ ${net.down.toFixed(1)} KB/s`;
+        document.getElementById('network-upload').textContent = `↑ ${net.up.toFixed(1)} KB/s`;
         historyData.networkDown.push(net.down);
         historyData.networkUp.push(net.up);
     });
@@ -1526,7 +1569,7 @@ window.serviceAction = function(action, name) {
     const container = document.getElementById('services-list').parentElement;
     currentServiceScrollPos = container.scrollTop;
     exec(`sudo systemctl ${action} ${name}`, (err, stdout, stderr) => {
-        alert(err ? `Failed: ${stderr || err.message}` : `${action}ed ${name}`);
+        alert(err ? `Failed: ${stderr || err.message}` : `${action}d ${name}`);
         if (!err) setTimeout(() => loadServices(), 300);
     });
 };
