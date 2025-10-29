@@ -16,7 +16,7 @@ This version needs some fixing, it's not final. Not everything is added still.<b
 Logo was as idea of heart pulse, bright red to add seriousness and cpu logo to resemple electronics. <br> 
 Like a cpu on cardiac monitor, really like it.<br>
 It's just for linux <br> <br>
-**Download** - <a href="">~~Link~~</a> <br><br>
+**Download** - <a href="https://github.com/banekondic1996/Elve-Taskmanager/releases/tag/1.0">Link</a> <br><br>
 <img width="1314" height="912" alt="image" src="https://github.com/user-attachments/assets/0065433a-f5ac-4e86-8dfe-d4bd1c473323" />
 
 
