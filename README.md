@@ -1,5 +1,5 @@
 # <img width="82" height="auto" alt="Elve System Monitor" src="https://github.com/user-attachments/assets/97021d33-ca42-433c-a9da-41adfd1f648e" /> Elve System Monitor
-
+**Demonstration video** - <a href='https://www.youtube.com/watch?v=8D7g_veuOgQ'>Link</a> <br> <br>
 This is just vibe coded system monitor "taskmanager" app that i made for personal usage. <br>
 Why?<br>
 Well cause KDE plasma System Monitor idle uses like 4-5% cpu, Gnome System monitor is almost same from 2010 and now,
