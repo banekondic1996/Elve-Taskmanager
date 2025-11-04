@@ -26,7 +26,6 @@ To use all functions you have to start app as root (the unpacked version)
 -Add option to choose user when adding crontab <br>
 -View graphs independently with more information (CPU, GPU, Network, Disk, RAM) <br>
 <br>
-
 This version needs some fixing, it's not final. Not everything is added still.<br>
 Logo was as idea of heart pulse, bright red to add seriousness and cpu logo to resemple electronics. <br> 
 Like a cpu on cardiac monitor, really like it.<br>
