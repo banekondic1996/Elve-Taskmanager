@@ -20,7 +20,7 @@ To use all functions you have to start app as root (the unpacked version)
 -Add startup apps<br>
 
 **To fix:**<br>
--To add disk usage information! Really important!
+-To add disk usage information! Really important!<br>
 -CPU and Network limiting not tested, might not be working <br>
 -GPU usage per process<br>
 -Make it more efficent by writing own CLI app that will return data<br>
