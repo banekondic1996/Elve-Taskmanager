@@ -1,6 +1,7 @@
 # <img width="82" height="auto" alt="Elve System Monitor" src="https://github.com/user-attachments/assets/97021d33-ca42-433c-a9da-41adfd1f648e" /> Elve System Monitor
 **Demonstration video** - <a href='https://www.youtube.com/watch?v=8D7g_veuOgQ'>Link</a> <br> <br>
-This is just vibe coded system monitor "taskmanager" app that i made for personal usage. <br>
+This is just vibe coded system monitor "taskmanager" app that i made for personal usage. <br><br>
+One system monitor to rule them all, one system monitor to find them, <br>one system monitor to bring them all and in the kernel bind them.
 
 **Why i made this?**<br>
 Well cause KDE plasma System Monitor idle uses like 4-5% cpu, Gnome System monitor is almost same from 2010 and now,
@@ -30,7 +31,7 @@ To use all functions you have to start app as root (the unpacked version)
 This version needs some fixing, it's not final. Not everything is added still.<br>
 Logo was as idea of heart pulse, bright red to add seriousness and cpu logo to resemple electronics. <br> 
 Like a cpu on cardiac monitor, really like it.<br>
-It's just for linux <br> <br>
+It's just for linux<br><br>
 **Discord server for requests/reporting bugs** - <a href="https://discord.gg/6PP5uqha">Discord</a> <br><br>
 **Download** - <a href="https://github.com/banekondic1996/Elve-Taskmanager/releases/tag/1.0">Link</a> <br><br>
 <img width="1314" height="912" alt="image" src="https://github.com/user-attachments/assets/0065433a-f5ac-4e86-8dfe-d4bd1c473323" />
