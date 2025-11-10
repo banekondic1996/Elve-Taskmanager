@@ -32,7 +32,12 @@ Like a cpu on cardiac monitor, really like it.<br>
 It's just for linux<br><br>
 **Discord server for requests/reporting bugs** - <a href="https://discord.gg/6PP5uqha">Discord</a> <br><br>
 **Download** - <a href="https://github.com/banekondic1996/Elve-Taskmanager/releases/tag/1.0">Link</a> <br><br>
-<img width="1327" height="918" alt="image" src="https://github.com/user-attachments/assets/123dca72-0eb4-4685-836c-0f5270229c30" />
+![ezgif-8fe2ab724bc191eb](https://github.com/user-attachments/assets/5e9c58fd-a5e4-4392-b6f1-265e471f86e5)
+
+
+
+
+
 
 
 
