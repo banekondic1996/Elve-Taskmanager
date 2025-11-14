@@ -31,7 +31,7 @@ Logo was as idea of heart pulse, bright red to add seriousness and cpu logo to r
 Like a cpu on cardiac monitor, really like it.<br>
 It's just for linux<br><br>
 **Discord server for requests/reporting bugs** - <a href="https://discord.gg/6PP5uqha">Discord</a> <br><br>
-**Download** - <a href="https://github.com/banekondic1996/Elve-Taskmanager/releases/tag/1.2">Link</a> <br><br>
+**Download** - <a href="https://github.com/banekondic1996/Elve-SystemMonitor/releases/tag/1.2">Link</a> <br><br>
 ![ezgif-8fe2ab724bc191eb](https://github.com/user-attachments/assets/5e9c58fd-a5e4-4392-b6f1-265e471f86e5)
 
 
